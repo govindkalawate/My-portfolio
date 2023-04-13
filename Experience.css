@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:#081b29;
+}
+
+.containerccc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.position {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #00abf0;
+  border-radius: 10px;
+  color: black(8, 8, 8);
+  background:transparent;
+}
+
+.position h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.position p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color:#070707;
+  transition: all 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+  margin-top: 100px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  display: block;
+  color: whitesmoke;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.hamburger {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 100;
+  color: white;
+
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color:white;
+}
+.position{
+  color: white;
+}

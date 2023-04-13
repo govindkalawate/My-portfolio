@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatable" content="IE=edge">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <title>Govind Kalawate</title>
+  <link rel="stylesheet" href="contactform.css">
+  <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+  
+
+</head>
+<div class ="containerddd">
+    <div class="blockbar"> 
+      <div class="sidebar">
+      <ul>
+        <li><a href="/Home.html">Home</a></li>
+              <li><a href="/My Intro.html">My Intro</a></li>
+              <li><a href="/Experience.html">Experience</a></li>
+              <li><a href="/Licences And Certificate.html">Licences/Achivements <br>& Skills</a></li>
+              <li><a href="/contactform.html">Contact Me</a></li>
+        
+      </ul>
+      <div class="cross">&#10005;</div>
+    </div>
+    <div class="hamburger">&#9776;</div>
+<div class="main">
+    <div class="contactform">
+     <form onsubmit="sendEmail();return false;">
+        <h1>Contact me for work/general Enquires</h1>
+        <form>
+            <div class="mb-3">
+              <label for="Clientemail" class="form-label">Name*</label>
+              <input type="name" class="form-control" id="clientemail" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="Clientemail" class="form-label">Email address*</label>
+                <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email & phone with anyone else.</div>
+              </div>
+            <div class="mb-3">
+              <label for="clientphone" class="form-label">Phone*</label>
+              <input type="phone" class="form-control" id="clientphone">
+            </div>
+            <div class="mb-3">
+                <label for="Clientemail" class="form-label">Enquiry</label>
+                <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+              </div>
+            <div class="mb-3" id="form-check">
+              <input type="checkbox" class="form-check-input" id="isclient">
+              <label class="form-check-label" for="isclient">I want you to work on a project with me* </label>
+            </div>
+            <button type="button" class="btn btn-sm" onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdLhIh9WtWDBrYNiZroP4BABmw3jfMCM3gZRrVEgVC7JQ68NA/viewform?usp=sf_link'">Submit</button>
+
+          </form>
+
+          <div class="social-icons">
+            <a href='tel:7666486747'><i class="lni lni-phone"></i></a>
+            <a href='mailto:kalawateg'><i class="lni lni-envelope"></i></a>
+            <a href='https://instagram.com/govind.kalawate?igshid=ZDdkNTZiNTM='><i class="lni lni-instagram-fill"></i></a>
+            <a href='https://twitter.com/GovindKalawate?t=e7gwuYa-WsviO-YcscntTg&s=08'><i class="lni lni-twitter-fill"></i></a>
+            <a href='https://github.com/govindkalawate'><i class="lni lni-github-original"></i></a>
+            <a href='https://www.linkedin.com/in/govind-kalawate-1297a7231/'><i class="lni lni-linkedin-original"></i></a>
+          </div>
+          
+   </div>
+
+<div>
+  
+  <script src=" https://smtpjs.com/v3/smtp.js"></script>
+  <script src="myscript.js"></script>
+  <script>
+    function sendEmail(){
+      Email.send({
+        Host : "smtp.gmail.com",
+        Username : "kalawateg@gmail.com",
+        Password : "6C544E6AB60965E1F6D0864C89E852FAEB1A",
+        To : 'kalawateg@gmail.com',
+        From : document.getElementById("email").value,
+        Subject : "New Contact Form Enquiry",
+        Body : "Name:"+ document.getElementById("name").value
+                + "<br> Email : " + document.getElementById("email").value
+                + "<br> Phone no. : " + document.getElementById("phone").value
+                + "<br> Message : " + document.getElementById("message").value
+
+
+    }).then(
+      message => alert("Message Sent Sucessfully")
+    );
+    }
+  </script>
+  <script src="scriptt.js"></script>
+</body>
+</html>

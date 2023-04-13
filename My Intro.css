@@ -1,0 +1,280 @@
+body {
+    background-color: #081b29;
+  }
+  
+.timeline {
+    position: 0 auto;
+    max-width: 750px;
+    padding: 25px;
+    display:grid;
+    grid-template-columns:1fr 3px 1fr ;
+    font-family: 'Fira Sans',sans-serif;
+    color:white;
+  }
+  
+ .timeline__component {
+     margin:0 20px 20px ;
+ }
+ .timeline__date--right{
+     text-align: right;
+ }
+ .timeline__middle{
+     position: relative;
+     background: white;
+ }
+ .timeline__point{
+     position:absolute;
+     top: 0;
+     left: 50%;
+     transform: translate(-50%);
+     width:15px;
+     height: 15px;
+     background:white;
+     border-radius: 50%;
+ }
+ .timeline__component--bg {
+     padding: 1.5em;
+     background:rgba(255,255,255,0.2) ;
+     box-shadow: 0 0 5px rgba(0,0,0,0.2);
+     border-radius: 10px;
+ }
+ .timeline__title{
+     margin: 0;
+     font-size: 1.15em;
+     font-weight: bold;
+
+ }
+ .timeline__paragraph{
+     line-height: 1.5;
+
+ }
+ .timeline__point--bottom{
+     top: initial;
+     bottom: 0;
+ }
+ .timeline__component--bottom {
+     margin-bottom: 0;
+
+ }
+ .containerddd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color:#070707;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    margin-top: 100px;
+  }
+  
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: whitesmoke;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+  
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color:white;
+  }
+  .intro-box {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 10px;
+
+  }
+  .intro-box {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  .projects-box {
+      position: absolute;
+      top: calc(100% + 50px);
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      width: 40%;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+  
+  
+  .projects-box h2 {
+    margin-top: 0;
+  }
+  
+  .projects-box img {
+    width: 30px;
+    height: 40px;
+    margin: 10px;
+  }
+  
+  .projects-box a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .projects-box a:hover {
+    text-decoration: underline;
+  }
+  
+  .projects-box a.github:hover img {
+    filter: grayscale(100%);
+  }
+  
+  .projects-box a.hackerrank:hover img {
+    filter: invert(100%);
+  }
+  
+  .projects-box a.codechef:hover img {
+    filter: sepia(100%);
+  }
+  
+  .projects-box a.leetcode:hover img {
+    filter: hue-rotate(90deg);
+  }
+  
+  .projects-box .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .projects-box img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline {
+    /* your existing styles */
+    margin-bottom: 90px; /* add some margin to the bottom */
+  }
+  
+  
+  /* For screens larger than 768px */
+@media (min-width: 768px) {
+  /* Set the container to display as a grid */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "timeline1 timeline2 timeline3"
+      "box1 box2 box2";
+  }
+
+  /* Position the timelines and boxes within the grid */
+  .timeline1 {
+    grid-area: timeline1;
+  }
+  .timeline2 {
+    grid-area: timeline2;
+  }
+  .timeline3 {
+    grid-area: timeline3;
+  }
+  .box1 {
+    grid-area: box1;
+  }
+  .box2 {
+    grid-area: box2;
+  }
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 767px) {
+  /* Hide the second and third timeline */
+  .timeline2,
+  .timeline3 {
+    display: none;
+  }
+
+  /* Set the container to display as a column */
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Adjust the width of the boxes */
+  .box1,
+  .box2 {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .timeline {
+    display: none;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .box {
+    width: 100%;
+  }
+}
+
+  
+  
+  
